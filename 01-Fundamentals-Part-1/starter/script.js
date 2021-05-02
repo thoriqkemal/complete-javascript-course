@@ -31,6 +31,7 @@ console.log(myFirstJob);
  */
 
 // Data Types
+/**
 let javascriptIsFun = true;
 console.log(true);
 
@@ -50,4 +51,18 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
+ */
 
+// let, const and var
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+// birthYear = 1990;  // const values can't change
+// const job;         // const values must be initialized
+
+var job = 'programmer';   // don't use var
+job = 'teacher';
+
+lastName = 'Schmedtmann';   // never declare variable like this
+console.log(lastName);
