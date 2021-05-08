@@ -207,6 +207,7 @@ Hint: Use an if/else statement 😉
 
 GOOD LUCK 😀
  */
+/**
 // Data 1
 // const massMark = 78,
 //   heightMark = 1.69;
@@ -235,3 +236,28 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI(${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 }
+ */
+
+// Type Conversion and Coercion
+
+// Type Conversion is when we manually convert from one type to another
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// Type Coercion is when javascript automatically convert type behind the scenes
+console.log('I am ' + 23 + ' years old');
+// all math operators work except +
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' / '2');
+console.log('23' > '18');
+
+let n = '1' + 1;  // '11'
+n = n - 1;        // 11 - 1
+console.log(n);
