@@ -382,7 +382,7 @@ Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 
 GOOD LUCK 😀
  */
-
+/**
 const mark = {
   fullName: 'Mark Miller',
   mass: 78,
@@ -407,4 +407,13 @@ if (mark.calcBMI() > john.calcBMI()) {
   console.log(`${mark.fullName}'s BMI (${mark.calcBMI().toFixed(1)}) is higher than ${john.fullName}'s (${john.calcBMI().toFixed(1)})!`);
 } else if (mark.calcBMI() < john.calcBMI()) {
   console.log(`${john.fullName}'s BMI (${john.calcBMI().toFixed(1)}) is higher than ${mark.fullName}'s (${mark.calcBMI().toFixed(1)})!`);
+}
+ */
+
+// Iteration: The for Loop
+// console.log('Lifting weights repetition 1 🏋');
+
+// for loop keeps running whi= 10 condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋`);
 }
