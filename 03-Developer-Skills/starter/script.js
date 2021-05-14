@@ -7,7 +7,7 @@
 // PROBLEM #1;
 /**
  We worl for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
- */
+
 
 const temperature = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
@@ -39,12 +39,12 @@ const calcAmplitude = function (temps) {
 // calcAmplitude([3, 7, 4, 1, 8]);
 const amplitude = calcAmplitude(temperature);
 console.log(amplitude);
+ */
 
 
 // PROBLEM #2;
 /**
 Function should now receive 2 arrays of temps
-*/
 
 // 1. Understanding the problem
 // - With 2 arrays, should we implement functionality twice? NO! Just merge two arrays
@@ -59,4 +59,50 @@ const calcTempAmplitude = function (temp1, temp2) {
 }
 
 const tempAmplitude = calcTempAmplitude([3, 5, 1], [9, 0, 5]);
+console.log(tempAmplitude);
+*/
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    // C. FIX
+    // value: Number(prompt('Degrees celsius')),
+    value: 10
+  };
+
+  // B. FIND
+  console.table(measurement);
+
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+}
+
+// A. IDENTIFY
+console.log(measureKelvin());
+
+
+const calcTempBug = function (temp1, temp2) {
+  const temps = temp1.concat(temp2);
+
+  let min = 0;
+  let max = 0;
+  for (let i = 0; i < temps.length; i++) {
+    const currTemp = temps[i];
+    if (typeof currTemp !== 'number') continue;
+
+    debugger;
+    if (currTemp < min) min = currTemp;
+    if (currTemp > max) max = currTemp;
+  }
+  console.log(min, max);
+  return max - min;
+}
+
+const tempAmplitude = calcTempBug([3, 5, 1], [9, 0, 5]);
 console.log(tempAmplitude);
