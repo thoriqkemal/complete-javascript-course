@@ -62,6 +62,8 @@ const tempAmplitude = calcTempAmplitude([3, 5, 1], [9, 0, 5]);
 console.log(tempAmplitude);
 */
 
+// Debugging
+/**
 const measureKelvin = function () {
   const measurement = {
     type: 'temp',
@@ -106,3 +108,32 @@ const calcTempBug = function (temp1, temp2) {
 
 const tempAmplitude = calcTempBug([3, 5, 1], [9, 0, 5]);
 console.log(tempAmplitude);
+ */
+
+// Coding Challenge #1
+/**
+Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures.Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+Your tasks:
+1. Create a function 'printForecast' which takes in an array 'arr' and logs astring like the above to the console.Try it with both test datasets.
+2. Use the problem - solving framework: Understand the problem and break it up into sub - problems!
+
+Test data:
+- Data 1: [17, 21, 23]
+- Data 2: [12, 5, -5, 0, 4]
+
+GOOD LUCK 😀
+ */
+
+// const temperatures = [17, 21, 23];
+const temperatures = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '...';
+  for (let i = 0; i < arr.length; i++) {
+    str += ` ${arr[i]}ºC in ${i + 1} days ... `;
+  }
+  return str;
+}
+
+console.log(printForecast(temperatures));
